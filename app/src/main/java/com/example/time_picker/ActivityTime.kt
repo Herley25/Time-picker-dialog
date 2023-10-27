@@ -24,6 +24,7 @@ class ActivityTime : AppCompatActivity(), View.OnClickListener, TimePickerDialog
         binding.buttonTimePicker.setOnClickListener(this)
     }
 
+    // Funcão que irá verificar/manuzear os parametros
     override fun onClick(v: View) {
         when (v.id) {
             R.id.button_time_picker -> {
@@ -32,6 +33,7 @@ class ActivityTime : AppCompatActivity(), View.OnClickListener, TimePickerDialog
         }
     }
 
+    // Observando os valores setados e mostrando em tela os respectivos valores
     override fun onTimeSet(view: TimePicker, hourOfDay: Int, minute: Int) {
         binding.textTimePicker.text = "$hourOfDay:$minute"
     }
